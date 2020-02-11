@@ -1,0 +1,14 @@
+Lets work on Function 1:
+MJ:
+Function 1:
+
+### START FUNCTION
+def dictionary_of_metrics(items):
+    itemsort = sorted(items)
+    return {"mean": round(np.mean(items),2),
+            "median": round(np.median(items),2),
+            "std": round(np.std(items, ddof=1),2),
+            "var": round(np.var(items, ddof=1),2),
+            "min": itemsort[0],
+            "max": itemsort[-1]}
+### END FUNCTION
