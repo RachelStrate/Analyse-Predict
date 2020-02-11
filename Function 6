@@ -1,0 +1,12 @@
+Let's work on Function 6 :)
+MJ:
+Function 6:
+
+### START FUNCTION
+def word_splitter(df):
+    meh = [list(i.lower().split(" ")) for i in df["Tweets"]]
+    df["Split Tweets"] = meh
+    df['Date'] = [i.split(' ', 1)[0] for i in df["Date"]]
+    df['Tweets'] = [i.lower() for i in df["Tweets"]]
+    return df
+### END FUNCTION
