@@ -1,0 +1,17 @@
+Lets's work on Function 4 :)
+MJ:
+Function 4:
+
+### START FUNCTION
+def extract_municipality_hashtags(df):
+    contains_email = []
+    hashtags = []
+    for x in df["Tweets"]:
+        contains_email.append([mun_dict[i] for i in x.split(' ') if i in mun_dict.keys()])
+        hashtags.append([i.lower() for i in x.split(' ') if '#' in i])
+    contains_email_nan = [i if i else np.nan for i in contains_email]
+    hashtags_nan = [i if i else np.nan for i in hashtags]
+    df["municipality"] = contains_email_nan
+    df["hashtags"] = hashtags_nan
+    return df 
+### END FUNCTION
