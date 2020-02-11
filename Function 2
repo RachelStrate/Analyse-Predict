@@ -1,0 +1,13 @@
+Lets work on Function 2:
+MJ:
+Function 2:
+
+### START FUNCTION
+def five_num_summary(items):
+    sorteditems = sorted(items)
+    return {'max': sorteditems[-1],
+            'median': round(np.median(items),2) ,
+            'min': sorteditems[0],
+            'q1': np.percentile(sorteditems, 25),
+            'q3': np.percentile(sorteditems, 75)}
+### END FUNCTION
