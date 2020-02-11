@@ -1,0 +1,19 @@
+Let's work on Function 5 :)
+MJ:
+Function 5:
+
+### START FUNCTION
+def number_of_tweets_per_day(df):
+    df["Date"] = [i.split(' ', 1)[0] for i in df["Date"]]
+    a = sorted(list(df["Date"].unique()))
+    dictp = {}
+    for i in a:
+        for x in df[df["Date"] == i]["Date"]:
+            if x in dictp.keys():
+                dictp[x] += 1
+            else:
+                dictp[x] = 1
+    new_df = pd.DataFrame.from_dict(data=dictp, orient="index", columns=["Tweets"])
+    new_df.index.name = "Date"
+    return new_df
+### END FUNCTION
