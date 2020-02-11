@@ -1,0 +1,9 @@
+Let's work on Function 3 :)
+MJ:
+
+Function 3:
+
+### START FUNCTION
+def date_parser(dates):
+    return [i.split(' ', 1)[0] for i in dates]
+### END FUNCTION
