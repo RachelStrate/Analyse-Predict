@@ -1,4 +1,18 @@
 Lets work on function 7 :)
 
 Function 7:
-
+# meh = [list(i.lower().split(" ")) for i in twitter_df["Tweets"]]
+# remove = stop_words_dict.values()
+# # twitter_df["Without Stop Words"] = meh
+# g = [i for i in [x for x in twitter_df["Without Stop Words"] for x in x] if i not in stop_words_dict["stopwords"]]
+# # me = [i for i in [x for x in twitter_df["Without Stop Words"] for x in x]]
+# removed = [i for i in [x for x in twitter_df["Without Stop Words"] for x in x] if i not in stop_words_dict["stopwords"]]
+# print(removed)
+# # for h in twitter_df["Without Stop Words"]:
+# #     if h in g:
+# #         print()
+# stop = stopwords.words(stop_words_dict.values())
+# twitter_df["Without Stop Words"].apply(lambda x: [item for item in x if item not in stop_words_dict.values()])
+# print(stop)
+twitter_df['Without Stop Words'] = [i.lower().split() for i in [x for x in twitter_df["Without Stop Words"]] if i.lower() not in stop_words_dict["stopwords"]]
+print(twitter_df)
